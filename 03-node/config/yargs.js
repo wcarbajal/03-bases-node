@@ -9,6 +9,10 @@ const argv = require( 'yargs' )
     type: 'boolean',    
     default: false,
     description: 'Mostrar tabla de multiplicar en consola',
+  }).option( 'h', {
+    alias: 'hasta',
+    type: 'number',    
+    description: 'Hasta que número multiplicar',
   }).check((argv) => {
     if (isNaN(argv.base)) {
       throw 'La base debe ser un número';
